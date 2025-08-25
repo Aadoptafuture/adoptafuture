@@ -140,19 +140,56 @@ a:hover,a:focus {
 		border:1px solid rgba(0,0,0,0.03);
 	}
 }
-.intro {
-	display:table;
-	width:100%;
-	height:auto;
-	padding:100px 0 100px 0;
-	text-align:center;
-	color:#fff;
-	background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.8)),url('../img/m1.jpg');
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	background-size:cover;
-	-o-background-size:cover;
+/* --- HERO: slow zooming background that repeats --- */
+
+/* 1) Prep the hero container */
+.intro{
+  position: relative;
+  overflow: hidden;              /* clips the zoomed image edges */
+  /* remove the old bg image; we'll add it via ::before */
+  background: none;
 }
+
+/* 2) The image layer (zooms) */
+.intro::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../img/m1.jpg') center/cover no-repeat;
+  transform: scale(1);
+  will-change: transform;
+  /* Pick ONE of the animations below: */
+
+/* A) Ping-pong (zooms in, then back out, smooth loop) */
+  animation: heroZoom 40s ease-in-out infinite alternate;
+
+/* B) Or continuous restart loop (remove the line above and use this) */
+/* animation: heroZoom 40s linear infinite; */
+  z-index: 0;
+}
+
+/* 3) Optional: gradient overlay on top (like before) */
+.intro::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.46), rgba(0,0,0,0.8));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 4) Make sure text sits above overlays */
+.intro .intro-body{
+  position: relative;
+  z-index: 2;
+}
+
+/* 5) Keyframes: adjust the final scale to taste (1.10–1.20 looks good) */
+@keyframes heroZoom{
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.12); }
+}
+
 .intro .intro-body {
 	display:table-cell;
 	vertical-align:middle;
