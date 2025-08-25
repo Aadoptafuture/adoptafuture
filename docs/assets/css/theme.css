@@ -143,18 +143,20 @@ a:hover,a:focus {
 /* --- HERO: slow zooming background that repeats --- */
 
 /* 1) Prep the hero container */
+
 .intro{
   position: relative;
-  overflow: hidden;              /* clips the zoomed image edges */
-  /* remove the old bg image; we'll add it via ::before */
+  overflow: hidden;
   background: none;
-	display: table;
-  width: 100%;
-  height: auto;
-  padding: 100px 0;
-  text-align: center;   /* <-- this centers the title */
-  color: #fff;
+  display: flex;                 /* center with flex */
+  align-items: center;           /* vertical center */
+  justify-content: center;       /* horizontal center */
+  min-height: 100vh;             /* full screen */
+  text-align: center;
+  padding: 0;
 }
+
+
 
 /* 2) The image layer (zooms) */
 .intro::before{
