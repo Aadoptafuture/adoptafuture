@@ -148,6 +148,12 @@ a:hover,a:focus {
   overflow: hidden;              /* clips the zoomed image edges */
   /* remove the old bg image; we'll add it via ::before */
   background: none;
+	display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  text-align: center;   /* <-- this centers the title */
+  color: #fff;
 }
 
 /* 2) The image layer (zooms) */
