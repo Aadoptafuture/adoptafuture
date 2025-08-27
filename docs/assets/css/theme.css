@@ -564,9 +564,9 @@ section {
 .feature-list li{
   display:flex;
   align-items:flex-start;
-  gap:10px;
+  gap:15px;
   margin-bottom:14px;
-  line-height:1.6;
+  line-height:1.8;
 }
 .feature-list .feature-icon{
   font-size:22px;      /* size of the “logo” */
