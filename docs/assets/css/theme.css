@@ -550,3 +550,14 @@ section {
 	outline:0;
 	outline: none;
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;   /* keep text & logo aligned vertically */
+  gap: 8px;              /* spacing between logo and text */
+}
+
+/* size the logo relative to the text */
+.navbar-brand .brand-logo {
+  height: 28px;          /* tweak until visually balanced */
+  width: auto;           /* keeps aspect ratio */
+}
