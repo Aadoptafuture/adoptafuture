@@ -558,7 +558,7 @@ section {
 
 /* size the logo relative to the text */
 .navbar-brand .brand-logo {
-  height: 28px;          /* tweak until visually balanced */
+  height: 10px;          /* tweak until visually balanced */
   width: auto;           /* keeps aspect ratio */
 }
 .feature-list li{
