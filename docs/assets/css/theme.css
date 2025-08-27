@@ -561,3 +561,16 @@ section {
   height: 28px;          /* tweak until visually balanced */
   width: auto;           /* keeps aspect ratio */
 }
+.feature-list li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:14px;
+  line-height:1.6;
+}
+.feature-list .feature-icon{
+  font-size:22px;      /* size of the “logo” */
+  min-width:22px;
+  color:#1ba39c;       /* theme accent */
+  margin-top:2px;      /* aligns icon with first text line */
+}
