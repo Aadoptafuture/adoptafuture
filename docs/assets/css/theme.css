@@ -571,7 +571,7 @@ section {
 .feature-list .feature-icon{
   font-size:22px;      /* size of the “logo” */
   min-width:22px;
-  color:#1ba39c;       /* theme accent */
+  color: #0a0009;       /* theme accent */
   margin-top:2px;      /* aligns icon with first text line */
 }
 /* --- Ultra-modern team section --- */
@@ -646,7 +646,7 @@ section {
   font-size: 11px;
   letter-spacing: .8px;
   text-transform: uppercase;
-  color: #0f766e;
+  color: #0a0009;
   background: rgba(27,163,156,.10);
   border: 1px solid rgba(27,163,156,.20);
   padding: 4px 8px;
