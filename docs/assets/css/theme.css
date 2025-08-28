@@ -686,3 +686,20 @@ section {
   height: 1em;   /* makes image height equal to text height */
   vertical-align: middle; /* aligns it with the text baseline */
 }
+/* Masonry columns, no gaps */
+.gallery-masonry { padding-top: 70px; }
+.masonry{
+  column-count: 1;
+  column-gap: 0;          /* no horizontal gap */
+}
+.masonry img{
+  width: 100%;
+  display: block;
+  margin: 0 0 0;          /* no vertical gap */
+  border: 0;
+}
+
+/* more columns on larger screens */
+@media (min-width:576px){ .masonry{ column-count: 2; } }
+@media (min-width:768px){ .masonry{ column-count: 3; } }
+@media (min-width:1200px){ .masonry{ column-count: 4; } }
