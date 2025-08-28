@@ -629,7 +629,7 @@ section {
   width: 100px;
   height: 100px;
   flex: 0 0 90px;
-  
+  border-radius: 50%;
   overflow: hidden;
   position: relative;
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
@@ -648,7 +648,7 @@ section {
   text-transform: uppercase;
   color: #0a0009;
   background: rgba(27,163,156,.10);
-  border: 1px solid rgba(27,163,156,.20);
+  border: 1px solid rgba(0,0,0,.5);
   padding: 4px 8px;
   border-radius: 999px;
   margin-bottom: 6px;
