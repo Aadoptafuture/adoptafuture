@@ -682,3 +682,7 @@ section {
     margin-bottom: 5px;
   }
 }
+.credits .brand-logo {
+  height: 1em;   /* makes image height equal to text height */
+  vertical-align: middle; /* aligns it with the text baseline */
+}
