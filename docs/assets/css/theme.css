@@ -169,7 +169,7 @@ a:hover,a:focus {
   /* Pick ONE of the animations below: */
 
 /* A) Ping-pong (zooms in, then back out, smooth loop) */
-  animation: heroZoom 40s ease-in-out infinite alternate;
+  animation: heroZoom 60s ease-in-out infinite alternate;
 
 /* B) Or continuous restart loop (remove the line above and use this) */
 /* animation: heroZoom 40s linear infinite; */
