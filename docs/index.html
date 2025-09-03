@@ -204,7 +204,36 @@
 	</div>
 </div>
 </section>
+ <!-- Impact Counter Section -->
+<section id="impact" class="impact-section text-center">
+  <div class="container">
+    <h2 class="mb-5">Our Impact So Far</h2>
+    <div class="row">
       
+      <div class="col-md-3 col-6">
+        <div class="counter" data-target="120">0</div>
+        <p>Scholarships Given</p>
+      </div>
+      
+      <div class="col-md-3 col-6">
+        <div class="counter" data-target="3500">0</div>
+        <p>Books Distributed</p>
+      </div>
+      
+      <div class="col-md-3 col-6">
+        <div class="counter" data-target="25">0</div>
+        <p>Workshops Conducted</p>
+      </div>
+      
+      <div class="col-md-3 col-6">
+        <div class="counter" data-target="500">0</div>
+        <p>Students Reached</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+     
 <!-- inject:partials/footer.html -->
 <footer>
 <div class="container text-center">
@@ -219,6 +248,38 @@
 
 
 <script src="assets/js/theme.js"></script>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200; // smaller = faster
+
+  counters.forEach(counter => {
+    const animate = () => {
+      const value = +counter.getAttribute('data-target');
+      const data = +counter.innerText;
+
+      const increment = value / speed;
+
+      if (data < value) {
+        counter.innerText = Math.ceil(data + increment);
+        setTimeout(animate, 20);
+      } else {
+        counter.innerText = value;
+      }
+    };
+
+    // Start animation when visible
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animate();
+          observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 1 });
+    
+    observer.observe(counter);
+  });
+</script>
 
 </body>
 
