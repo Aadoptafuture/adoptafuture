@@ -702,7 +702,7 @@ section {
 /* more columns on larger screens */
 @media (min-width:576px){ .masonry{ column-count: 3; } }
 @media (min-width:768px){ .masonry{ column-count: 4; } }
-@media (min-width:1200px){ .masonry{ column-count: 6; } }
+@media (min-width:1200px){ .masonry{ column-count: 5; } }
 .impact-section {
   background: #f8f9fa; /* light gray background */
   padding: 60px 0;
