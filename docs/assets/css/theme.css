@@ -690,7 +690,7 @@ section {
 .gallery-masonry { padding-top: 70px; }
 .masonry{
   column-count: 1;
-  column-gap: 0;          /* no horizontal gap */
+  column-gap: 1;          /* no horizontal gap */
 }
 .masonry img{
   width: 100%;
@@ -717,5 +717,21 @@ section {
   font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
+}
+/* smooth reveal */
+.counter{
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+.counter.reveal{
+  opacity: 1;
+  transform: none;
+}
+
+/* optional: make counters pop a bit */
+.counter{
+  font-weight: 800;
+  letter-spacing: .5px;
 }
 
